@@ -9,6 +9,11 @@ Download the repository
 git clone git@bitbucket.org:diegofdominguez/courseapi.git
 ```
 
+Go to project folder
+```bash
+cd courseapi
+```
+
 Install node modules
 ```bash
 npm install
