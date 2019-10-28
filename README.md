@@ -19,4 +19,4 @@ Run development server locally
 npm run start-dev
 ```
 
-
+Test the App in Postman using the provided collection CoursesAPI.postman_collection.json
