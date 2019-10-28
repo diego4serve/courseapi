@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "fa843ca1-7b79-4538-8638-20c2ff815b6e",
+		"name": "CoursesAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "production",
+			"item": [
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "Create Course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"After refactor\",\n    \"schedule\": \"&:00 AM - 8:00 AM\",\n    \"startDate\": \"2019-12-01\",\n    \"endDate\": \"2019-12-31\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Enroll to course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"studentId\": \"5db4583fda8fde17858064e3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses/5db4ca7a448b801a4d9add6c/enroll",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses",
+										"5db4ca7a448b801a4d9add6c",
+										"enroll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unenroll course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"studentId\": \"5db454637cc9b416bb9172d8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses/5db4bc0e9d260a19aa6207cf/unenroll",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses",
+										"5db4bc0e9d260a19aa6207cf",
+										"unenroll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Course",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses/5db4bc0e9d260a19aa6207cf",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses",
+										"5db4bc0e9d260a19aa6207cf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Course",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses/5db4edaea9a1dd1b94657ce6",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses",
+										"5db4edaea9a1dd1b94657ce6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get top 3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses/top3",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses",
+										"top3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Course",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"name\": \"Fisica\",\n        \"schedule\": \"&:00 AM - 8:00 AM\",\n        \"startDate\": \"2019-12-01T00:00:00.000Z\",\n        \"endDate\": \"2019-12-31T00:00:00.000Z\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/courses/5db4cafbb8ad761a5ee80e05",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"courses",
+										"5db4cafbb8ad761a5ee80e05"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Students",
+					"item": [
+						{
+							"name": "Get Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/students/5db454637cc9b416bb9172d8",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"students",
+										"5db454637cc9b416bb9172d8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/students",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Student",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Diego\",\n    \"lastName\": \"Dominguez\",\n    \"email\": \"diego@miniempleos.co\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/students",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Diego\",\n    \"lastName\": \"Dominguez\",\n    \"email\": \"diego@miniempleos.co\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/students/5db3d33f55f628164c12e66c",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"students",
+										"5db3d33f55f628164c12e66c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Student",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://coursesapi.herokuapp.com/api/students/5db3d33f55f628164c12e66c",
+									"protocol": "https",
+									"host": [
+										"coursesapi",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"students",
+										"5db3d33f55f628164c12e66c"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "development",
+			"item": [
+				{
+					"name": "Students",
+					"item": [
+						{
+							"name": "Get Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/students/5db454637cc9b416bb9172d8",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"students",
+										"5db454637cc9b416bb9172d8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/students",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Student",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Diego\",\n    \"lastName\": \"Dominguez\",\n    \"email\": \"diego@miniempleos.co\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/students",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Diego\",\n    \"lastName\": \"Dominguez\",\n    \"email\": \"diego@miniempleos.co\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/students/5db3d33f55f628164c12e66c",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"students",
+										"5db3d33f55f628164c12e66c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Student",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/students/5db3d33f55f628164c12e66c",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"students",
+										"5db3d33f55f628164c12e66c"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "Create Course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Dummy Course\",\n    \"schedule\": \"&:00 AM - 8:00 AM\",\n    \"startDate\": \"2019-12-01\",\n    \"endDate\": \"2019-12-31\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/courses",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Enroll to course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"studentId\": \"5db4582fda8fde17858064e2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/courses/5db4ca7a448b801a4d9add6c/enroll",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"5db4ca7a448b801a4d9add6c",
+										"enroll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unenroll course",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"studentId\": \"5db454637cc9b416bb9172d8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/courses/5db4bc0e9d260a19aa6207cf/unenroll",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"5db4bc0e9d260a19aa6207cf",
+										"unenroll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Course",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/courses/5db4bc0e9d260a19aa6207cf",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"5db4bc0e9d260a19aa6207cf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Course",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/courses/5db6681ee2195643a0ba621c",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"5db6681ee2195643a0ba621c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/courses",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get top 3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/courses/top3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"top3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Course",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Programacion mod\",\n    \"schedule\": \"&:00 AM - 8:00 AM\",\n    \"startDate\": \"2019-12-01\",\n    \"endDate\": \"2019-12-31\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/courses/5db4bc0e9d260a19aa6207cf",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"courses",
+										"5db4bc0e9d260a19aa6207cf"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
